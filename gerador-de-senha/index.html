@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gerador de senha</title>
+    <style>
+        *{
+          font-family: Arial, Helvetica, sans-serif;  
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Gerador de Senhas</h1>
+    <form id="password-generator-form">
+        <label for="password-length">Tamanho da Senha:</label>
+        <input type="number" id="password-length" value="12" required name="password-length" min="4" max="50" required>
+        <br>
+        
+        <label for="include-symbols">Incluir Símbolos:</label>
+        <input type="checkbox" id="include-symbols"  name="include-symbols">
+        <br>
+
+        <label for="include-uppercase">Incluir Letras Maiúsculas:</label>
+        <input type="checkbox" id="include-uppercase" name="include-uppercase">
+        <br>
+
+        <label for="include-numbers">Incluir Números:</label>
+        <input type="checkbox" id="include-numbers" name="include-numbers">
+        <br>
+
+        <label for="include-lowercase">Incluir Letras Minúsculas:</label>
+        <input type="checkbox" id="include-lowercase"  name="include-lowercase">
+        <br>
+
+        <label for="exclude-similar">Excluir Caracteres Parecidos (e.g., O, 0, l, 1):</label>
+        <input type="checkbox" id="exclude-similar"  name="exclude-similar">
+        <br>
+
+        <button type="button" id="generate-button">Gerar Senha</button>
+    </form>
+
+    <h1 id="password"></h1>
+</body>
+</html>
